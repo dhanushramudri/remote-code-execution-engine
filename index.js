@@ -71,20 +71,20 @@ exports.handler = async (event) => {
 };
 
 // Local test
-// (async () => {
-//   const testEvent = {
-//     language: "javascript",
-//     code: `console.log("Hello from JavaScript!");
-//         function greet(name) {
-//             console.log("Hello, " + name + "!");
-//         }
-//         greet("Alice");
-//         greet("Bob");`,
-//   };
-//   try {
-//     const output = await exports.handler(testEvent);
-//     console.log(output);
-//   } catch (err) {
-//     console.error(err);
-//   }
-// })();
+(async () => {
+  const testEvent = {
+    language: "javascript",
+    code: `function twoSum(n,m){
+      return n+m 
+    }
+      
+    console.log(twoSum(2,3))`,
+  };
+
+  try {
+    const output = await exports.handler(testEvent);
+    console.log(output);
+  } catch (err) {
+    console.error(err);
+  }
+})();
